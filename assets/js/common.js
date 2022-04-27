@@ -7,6 +7,12 @@ jQuery(document).ready(function ($) {
 		event.preventDefault();
 		$('.header-mobile').css('display', 'none');
 	});
+	//from taalhammer-child
+	$('body').on('click', '.siteMal-header .burger-wrapper, .header-mobile__top .close-wrapper', function (event) {
+		event.preventDefault();
+		$('.header-mobile').toggleClass('open');
+	});
+
 	/*$('body').on('click', '.header-mobile .navbar__link', function(event) {
 		event.preventDefault();
 		$('.header-mobile').css('display', 'none');

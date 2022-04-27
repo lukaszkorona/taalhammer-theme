@@ -773,3 +773,188 @@ function getFooterLogoSrc()
     $img = wp_get_attachment_image_src($footer_logo, 'full');
     return $img;
 }
+
+// from taalhammer-child
+add_action( 'wp_enqueue_scripts', 'enqueue_parent_styles' );
+/***
+ * front css
+ ***/
+add_action( 'wp_head', 'theme_name_styles', 0 );
+function theme_name_styles() {
+
+    wp_enqueue_style( 'common_CSS', get_template_directory_uri() . '/assets/css/common.css', [], time());
+    wp_enqueue_style( 'media_CSS', get_template_directory_uri() . '/assets/css/media.css', [], time());
+}
+function enqueue_parent_styles() {
+    wp_enqueue_style( 'parent-style', get_template_directory_uri().'/style.css' );
+    wp_enqueue_style( 'twentysixteen-block-style', get_template_directory_uri() . '/css/blocks.css', array( 'twentysixteen-style' ), '20190102' );
+
+}
+function mychildtheme_enqueue_styles() {
+    $parent_style = 'parent-style';
+
+    wp_enqueue_style( $parent_style, get_template_directory_uri() . '/css/blog.css' );
+    wp_enqueue_style( 'child-style',
+        get_stylesheet_directory_uri() . '/css/blog.css',
+        array( $parent_style )
+    );
+}
+add_action( 'wp_enqueue_scripts', 'mychildtheme_enqueue_styles' );
+add_action('acf/init', 'my_acf_init');
+function my_acf_init() {
+
+    // check function exists
+    if( function_exists('acf_register_block') ) {
+
+        // register a register-to-app block
+        acf_register_block(array(
+            'name'				=> 'register_to_app',
+            'title'				=> __('Register to the app'),
+            'description'		=> __('Section with 3 columns'),
+            'render_callback'	=> 'my_acf_block_render_callback',
+            'category'			=> 'formatting',
+            'icon'				=> 'admin-comments',
+            'keywords'			=> array( 'first_block', 'quote' ),
+        ));
+
+        // register a small-banner block
+        acf_register_block(array(
+            'name'				=> 'small_banner',
+            'title'				=> __('Small Banner'),
+            'description'		=> __('A small banner with text.'),
+            'render_callback'	=> 'my_acf_block_render_callback',
+            'category'			=> 'formatting',
+            'icon'				=> 'admin-comments',
+            'keywords'			=> array( 'first_block', 'quote' ),
+        ));
+
+        // register a first-block block
+        acf_register_block(array(
+            'name'				=> 'first_block',
+            'title'				=> __('Hero section'),
+            'description'		=> __('A custom hero section.'),
+            'render_callback'	=> 'my_acf_block_render_callback',
+            'category'			=> 'formatting',
+            'icon'				=> 'admin-comments',
+            'keywords'			=> array( 'first_block', 'quote' ),
+        ));
+        // register a second-block block
+        acf_register_block(array(
+            'name'				=> 'second_block',
+            'title'				=> __('Atom section'),
+            'description'		=> __('A custom atom section'),
+            'render_callback'	=> 'my_acf_block_render_callback',
+            'category'			=> 'formatting',
+            'icon'				=> 'admin-comments',
+            'keywords'			=> array( 'second_block', 'quote' ),
+        ));
+        // register a third-block block
+        acf_register_block(array(
+            'name'				=> 'third_block',
+            'title'				=> __('Languages section'),
+            'description'		=> __('A custom languages section.'),
+            'render_callback'	=> 'my_acf_block_render_callback',
+            'category'			=> 'formatting',
+            'icon'				=> 'admin-comments',
+            'keywords'			=> array( 'third_block', 'quote' ),
+        ));
+        // register a fourth-block block
+        acf_register_block(array(
+            'name'				=> 'fourth_block',
+            'title'				=> __('Editor section'),
+            'description'		=> __('A custom editor section.'),
+            'render_callback'	=> 'my_acf_block_render_callback',
+            'category'			=> 'formatting',
+            'icon'				=> 'admin-comments',
+            'keywords'			=> array( 'fourth_block', 'quote' ),
+        ));
+        // register a fifth-block block
+        acf_register_block(array(
+            'name'				=> 'fifth_block',
+            'title'				=> __('Listening section'),
+            'description'		=> __('A custom listening section.'),
+            'render_callback'	=> 'my_acf_block_render_callback',
+            'mode'              => 'edit',
+            'category'			=> 'formatting',
+            'icon'				=> 'admin-comments',
+            'keywords'			=> array( 'fifth_block', 'quote' ),
+        ));
+
+        // register a sixth-block block
+        acf_register_block(array(
+            'name'				=> 'sixth_block',
+            'title'				=> __('Stats section'),
+            'description'		=> __('A custom stats section.'),
+            'render_callback'	=> 'my_acf_block_render_callback',
+            'category'			=> 'formatting',
+            'icon'				=> 'admin-comments',
+            'keywords'			=> array( 'sixth_block', 'quote' ),
+        ));
+        // register a seventh-block block
+        acf_register_block(array(
+            'name'				=> 'seventh_block',
+            'title'				=> __('Grammar section'),
+            'description'		=> __('A custom grammar section.'),
+            'render_callback'	=> 'my_acf_block_render_callback',
+            'category'			=> 'formatting',
+            'icon'				=> 'admin-comments',
+            'keywords'			=> array( 'seventh_block', 'quote' ),
+        ));
+        // register a seventh-block block
+        acf_register_block(array(
+            'name'				=> 'teachers section',
+            'title'				=> __('Teachers section'),
+            'description'		=> __('A custom teachers section.'),
+            'render_callback'	=> 'my_acf_block_render_callback',
+            'category'			=> 'formatting',
+            'icon'				=> 'admin-comments',
+            'keywords'			=> array( 'teachers_section', 'quote' ),
+        ));
+        acf_register_block(array(
+            'name'				=> 'pricing_section',
+            'title'				=> __('Pricing'),
+            'description'		=> __('A custom pricing section.'),
+            'render_callback'	=> 'my_acf_block_render_callback',
+            'category'			=> 'formatting',
+            'icon'				=> 'admin-comments',
+            'keywords'			=> array( 'pricing_section', 'quote' ),
+        ));
+        acf_register_block(array(
+            'name'				=> 'icons_section',
+            'title'				=> __('Icons'),
+            'description'		=> __('A custom icons section.'),
+            'render_callback'	=> 'my_acf_block_render_callback',
+            'category'			=> 'formatting',
+            'icon'				=> 'admin-comments',
+            'keywords'			=> array( 'icons_section', 'quote' ),
+        ));
+
+    }
+}
+function my_acf_block_render_callback( $block ) {
+
+    // convert name ("acf/first-block") into path friendly slug ("first-block")
+    $slug = str_replace('acf/', '', $block['name']);
+
+    // include a template part from within the "template-parts/block" folder
+    if( file_exists( get_theme_file_path("/template-parts/block/content-{$slug}.php") ) ) {
+        include( get_theme_file_path("/template-parts/block/content-{$slug}.php") );
+    }
+}
+if ( function_exists( 'acf_add_options_page' ) ) {
+
+    acf_add_options_page( array(
+        'page_title' => 'Options',
+        'menu_title' => 'Options',
+        'menu_slug'  => 'options',
+        'capability' => 'edit_posts',
+        'icon_url'	 => 'dashicons-admin-generic',
+        'position'	 => '56',
+        'redirect'   => false
+    ) );
+}
+
+/*add_action( 'wp_footer', 'theme_name_scripts2' );
+function theme_name_scripts2() {
+    wp_enqueue_script('common_JS', get_stylesheet_directory_uri() . '/assets/js/common2.js', ['jquery'], time());
+}*/
