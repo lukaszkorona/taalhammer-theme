@@ -1031,51 +1031,6 @@ margin: 0 15rem 0 15rem;
 .editor__gif-wrapper--mobile{
     display: none;
 }
-.owl-prev{
-    position: absolute;
-    left:4rem;
-    top: 50%;
-    width: 4rem;
-    height: 4rem;
-    transform: translateY(-50%);
-    background-image: url(../images/Small_icon/png/left.png);
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-color: unset;
-    color: transparent;
-}
-.owl-next{
-    position: absolute;
-    right: 4rem;
-    width: 4rem;
-    height: 4rem;
-    top: 50%;
-    transform: translateY(-50%);
-    background-image: url(../images/Small_icon/png/right.png);
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-color: unset;
-    color: transparent;
-}
-.owl-next:hover{
-    background-image: url(../images/Small_icon/png/right.png);
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-color: unset;
-    color: transparent;
-    opacity: .8;
-}
-.owl-prev:hover{
-    background-image: url(../images/Small_icon/png/left.png);
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-color: unset;
-    color: transparent;
-    opacity: .8;
-}
-.owl-nav .disabled{
-    display: none;
-}
 .app-link--listen:hover{
     border-color: #FFD600;
     color: black;
@@ -1083,13 +1038,6 @@ margin: 0 15rem 0 15rem;
 }
 .header-app-link-wrapper--mobile{
     display: none;
-}
-.owl-stage{
-    display: flex;
-    transform: translateY(-.1rem);
-}
-.owl-carousel .owl-stage::after {
-    display: none!important;
 }
 .site-main{
     max-width: 1266px;

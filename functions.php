@@ -381,7 +381,6 @@ function twentysixteen_scripts() {
 
 	// Theme stylesheet.
 	wp_enqueue_style( 'twentysixteen-style', get_stylesheet_uri(), array(), '20190507' );
-	wp_enqueue_style( 'owl-style', get_template_directory_uri() . '/css/owl.carousel.css', array( 'twentysixteen-style' ), '20170530' );
 
 	// Load the Internet Explorer specific stylesheet.
 	wp_enqueue_style( 'twentysixteen-ie', get_template_directory_uri() . '/css/ie.css', array( 'twentysixteen-style' ), '20170530' );
@@ -400,7 +399,6 @@ function twentysixteen_scripts() {
 	wp_script_add_data( 'twentysixteen-html5', 'conditional', 'lt IE 9' );
 
 	wp_enqueue_script( 'twentysixteen-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20170530', true );
-	wp_enqueue_script( 'owl', get_template_directory_uri() . '/js/owl.carousel.min.js', array(), '20170530', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -670,10 +668,10 @@ function theme_name_scripts() {
 /***
  * back css/js
  ***/
-add_action( 'admin_enqueue_scripts', 'enq_admin_scripts' );
+/*add_action( 'admin_enqueue_scripts', 'enq_admin_scripts' );
 function enq_admin_scripts( $hook_suffix ){
     wp_enqueue_script('admin-back_JS', get_template_directory_uri() . '/assets/js/admin-back.js');
-}
+}*/
 
 /***
  *	Menu display settings:

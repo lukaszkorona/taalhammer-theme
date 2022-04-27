@@ -28,22 +28,6 @@ jQuery(document).ready(function ($) {
 		var body = $("html, body");
 		$(body).stop().animate({scrollTop: el.offset().top}, 1000, 'linear', function(){});
 	});*/
-	$('.owl-carousel').owlCarousel({
-
-		nav: true, // Show next and prev buttons
-		URLhashListener: true,
-		stagePadding: 0,
-		startPosition: 'URLHash',
-		slideSpeed: 300,
-		paginationSpeed: 400,
-		dots: false,
-		items: 1,
-		itemsDesktop: false,
-		itemsDesktopSmall: false,
-		itemsTablet: false,
-		itemsMobile: false
-
-	});
 	$('.payments-content-item__link button').click(function(){
 		$(this).parents('.payments-content-item__link').addClass('none');
 		$(this).parents('.payments-content-item__link').addClass('none');
