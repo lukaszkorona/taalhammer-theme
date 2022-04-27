@@ -1,0 +1,16 @@
+<svg width="65" height="65" viewBox="0 0 65 65" fill="none" xmlns="http://www.w3.org/2000/svg">
+<mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="65" height="65">
+<ellipse cx="32.1247" cy="32.2484" rx="31.9401" ry="32.2484" fill="#C4C4C4"/>
+</mask>
+<g mask="url(#mask0)">
+<path d="M122 0H0V65H122V0Z" fill="white"/>
+<path d="M122 14.4279H0V21.7723H122V14.4279Z" fill="#0D5EAF"/>
+<path d="M122 28.8371H0V36.1815H122V28.8371Z" fill="#0D5EAF"/>
+<path d="M122 43.265H0V50.6094H122V43.265Z" fill="#0D5EAF"/>
+<path d="M122 57.5997H0V64.9441H122V57.5997Z" fill="#0D5EAF"/>
+<path d="M122 0H0V7.34442H122V0Z" fill="#0D5EAF"/>
+<path d="M35.651 0H0V29.4895H35.651V0Z" fill="#0D5EAF"/>
+<path d="M35.651 14.5024H0V21.8469H35.651V14.5024Z" fill="white"/>
+<path d="M21.4165 0.0186462H14.1607V36.6289H21.4165V0.0186462Z" fill="white"/>
+</g>
+</svg>
