@@ -762,14 +762,11 @@ add_action('customize_register', 'addamant_settings_theme');
 
 function getHeaderLogoSrc()
 {
-    $img = str_replace('http:', 'https:', get_theme_mod('main_logo'));
-    return $img;
+    return get_theme_mod('main_logo');
 }
 function getFooterLogoSrc()
 {
-    $footer_logo = str_replace('http:', 'https:', get_theme_mod('footer_logo'));
-    $img = wp_get_attachment_image_src($footer_logo, 'full');
-    return $img;
+    return get_theme_mod('footer_logo');
 }
 
 // from taalhammer-child
