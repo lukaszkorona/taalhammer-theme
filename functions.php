@@ -658,7 +658,7 @@ function my_dump($string){
  ***/
 add_action( 'wp_footer', 'theme_name_scripts' );
 function theme_name_scripts() {
-    wp_enqueue_script('common_JS', get_template_directory_uri() . '/assets/js/common.js', ['jquery'], time());
+    wp_enqueue_script('common_JS', get_template_directory_uri() . '/js/common.js', ['jquery'], time());
     wp_localize_script( 'common_JS', 'ajax_url',
         array(
             'url' => admin_url('admin-ajax.php')
