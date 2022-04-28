@@ -766,7 +766,8 @@ function getHeaderLogoSrc()
 }
 function getFooterLogoSrc()
 {
-    return get_theme_mod('footer_logo');
+    $img = wp_get_attachment_image_src(get_theme_mod('footer_logo'), 'full');
+    return $img;
 }
 
 // from taalhammer-child
