@@ -777,8 +777,8 @@ add_action( 'wp_enqueue_scripts', 'enqueue_parent_styles' );
 add_action( 'wp_head', 'theme_name_styles', 0 );
 function theme_name_styles() {
 
-    wp_enqueue_style( 'common_CSS', get_template_directory_uri() . '/assets/css/common.css', [], time());
-    wp_enqueue_style( 'media_CSS', get_template_directory_uri() . '/assets/css/media.css', [], time());
+    wp_enqueue_style( 'common_CSS', get_template_directory_uri() . '/css/common.css', [], time());
+    wp_enqueue_style( 'media_CSS', get_template_directory_uri() . '/css/media.css', [], time());
 }
 function enqueue_parent_styles() {
     wp_enqueue_style( 'parent-style', get_template_directory_uri().'/style.css' );
