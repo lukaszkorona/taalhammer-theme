@@ -4100,6 +4100,10 @@ h6 {
 }
 
 .wp-block-columns {
+	border: none;
+}
+
+.home .wp-block-columns {
 	padding: 10rem 18rem;
 	border: none;
 	margin: 0 auto;
@@ -4107,21 +4111,21 @@ h6 {
 	align-items: center;
 }
 
-.wp-block-columns p {
+.home .wp-block-columns p {
 	font-size: 4rem;
 	font-family: Arial, Helvetica, sans-serif;
 	line-height: 1.3em;
 	margin-bottom: 0.5em;
 }
 
-.wp-block-columns.video-columns {
+.home .wp-block-columns.video-columns {
 
 }
-.wp-block-columns p:last-child {
+.home .wp-block-columns p:last-child {
 	margin: 0;
 }
 
-.wp-block-columns.video-columns figure {
+.home .wp-block-columns.video-columns figure {
 	margin: 0;
 }
 
@@ -4129,17 +4133,17 @@ h6 {
 	background: #EDEDED;
 }
 
-.wp-block-columns.image-columns {
+.home .wp-block-columns.image-columns {
 	padding-bottom: 0;
 	padding-top: 0;
 	align-items: flex-end;
 }
 
-.wp-block-columns.image-columns .wp-block-column:nth-child(2) {
+.home .wp-block-columns.image-columns .wp-block-column:nth-child(2) {
 	padding-top: 6rem;
 	padding-bottom: 6rem;
 }
-.wp-block-columns.image-columns .wp-block-column img {
+.home .wp-block-columns.image-columns .wp-block-column img {
 	width: 80rem;
 	margin-top: -5rem;
 	margin-left: auto;
@@ -4276,10 +4280,10 @@ h2.has-text-align-center {
 }
 
 @media (max-width: 1200px) {
-	.wp-block-columns p {
+	.home .wp-block-columns p {
 		font-size: 5rem;
 	}
-	.wp-block-columns {
+	.home .wp-block-columns {
 		padding: 10rem 10rem;
 	}
 	h2.has-text-align-center {
@@ -4407,10 +4411,10 @@ h2.has-text-align-center {
 @media (max-width: 560px) {
 
 
-	.wp-block-columns p {
+	.home .wp-block-columns p {
 		font-size: 3rem !important;
 	}
-	.wp-block-columns {
+	.home .wp-block-columns {
 		padding: 30px 20px;
 	}
 	h2.has-text-align-center {
@@ -4419,7 +4423,7 @@ h2.has-text-align-center {
 		padding-right: 20px;
 		text-align: left;
 	}
-	.wp-block-columns p:last-child {
+	.home .wp-block-columns p:last-child {
 		margin-bottom: 15px;
 	}
 	.register-to-app-section .title {
@@ -4491,7 +4495,7 @@ h2.has-text-align-center {
 		line-height: 1.1em;
 	}
 
-	.wp-block-columns.image-columns .wp-block-column:nth-child(2) {
+	.home .wp-block-columns.image-columns .wp-block-column:nth-child(2) {
 		padding-bottom: 0;
 	}
 
