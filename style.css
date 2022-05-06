@@ -4544,3 +4544,86 @@ h2.has-text-align-center {
 .entry-content h3 {
 	font-size: 20px !important;
 }
+
+.wpml-ls-flag {
+  margin-right: 3px;
+}
+
+.navbar__item_parent {
+  position: relative;
+}
+
+.navbar__link {
+	padding: 10px;
+}
+
+.navbar__item_parent > .navbar__link:hover ~ .navbar-sub {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.navbar__item_parent > .navbar-sub {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+  background: #fff;
+  top: calc(100%);
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 5px;
+  margin: 0;
+  z-index: 100;
+	border: 1px solid #999;
+}
+
+.navbar__item_parent > .navbar-sub:hover {
+  pointer-events: all;
+  opacity: 1;
+}
+
+.navbar__item_parent > .navbar-sub .navbar__item {
+  margin-right: 0;
+  width: max-content;
+}
+
+.header-mobile.open .navbar__item_parent {
+  position: relative;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-mobile.open .navbar__item_parent > .navbar__link:hover ~ .navbar-sub {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.header-mobile.open .navbar__item {
+	padding: 0;
+}
+
+.header-mobile.open .navbar__item_parent > .navbar-sub {
+  margin: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  flex-flow: column;
+  position: static;
+  opacity: 1;
+  pointer-events: all;
+  transform: unset;
+  background-color: transparent;
+  padding: 0;
+	border: none;
+}
+
+.header-mobile.open .navbar__item_parent > .navbar-sub:hover {
+  pointer-events: all;
+  opacity: 1;
+}
+
+.header-mobile.open .navbar__item_parent > .navbar-sub .navbar__item {
+  margin-right: 0;
+  width: max-content;
+}
