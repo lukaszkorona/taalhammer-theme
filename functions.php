@@ -802,6 +802,16 @@ function my_acf_init() {
     // check function exists
     if( function_exists('acf_register_block') ) {
 
+			// register a register-to-app block
+			acf_register_block(array(
+					'name'				=> 'payments_content',
+					'title'				=> __('Payments'),
+					'description'		=> __('Section with 2 tabs & 3 columns each'),
+					'render_callback'	=> 'my_acf_block_render_callback',
+					'category'			=> 'formatting',
+					'icon'				=> 'admin-comments',
+			));
+
         // register a register-to-app block
         acf_register_block(array(
             'name'				=> 'register_to_app',
