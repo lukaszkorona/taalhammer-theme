@@ -134,3 +134,25 @@ $lifetime_label = get_field('lifetime_label');
 
   </div>
 </div>
+
+<script>
+	jQuery(document).ready(function ($) {
+		$('.payments-content-nav__item a').on('click', function () {
+			$.each($('.payments-content-nav__item a'), function (k, v) {
+				$(v).removeClass('active');
+			});
+			var $this = $(this);
+			var this_data = $this.attr('data-type');
+			$this.addClass('active');
+			show_block(this_data);
+		});
+	});
+
+	function show_block($item) {
+		jQuery.each(jQuery('.payments-content .payments-content-items'), function (k, v) {
+			jQuery(v).hide();
+		});
+		console.log(('.payments-' + $item));
+		jQuery('.payments-' + $item).show();
+	}
+</script>
