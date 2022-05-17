@@ -6,34 +6,8 @@
 $id = '' . $block['id'];
 
 $see_details = get_field('see_details');
-$upgrade = get_field('upgrade');
-$start_my_free_trial = get_field('start_my_free_trial');
 $monthly_label = get_field('monthly_label');
 $lifetime_label = get_field('lifetime_label');
-
-
-function get_url_for_button($item)
-{
-	global $current_user;
-	$get_started = __('Upgrade', 'taalhammer-payments');
-	$get_started_not_login = __('Start My Free Trial', 'taalhammer-payments');
-	$get_started_level = __('Your Level', 'taalhammer-payments');
-	if (is_user_logged_in()) {
-
-		if ($current_user->membership_level->ID != $item) {
-			return pmpro_getCheckoutButton($item, $get_started);
-		} else {
-			return "<a href='$url' class='pmpro_btn ths' disabled>$get_started_level</a>";
-		}
-	} else {
-		$url = wp_login_url();
-		return "<a href='$url' class='pmpro_btn ths'>$get_started_not_login</a>";
-	}
-}
-if (!is_user_logged_in()) {
-	$class_login = 'not_login_class';
-}
-
 
 ?>
 <div class="payments-content">

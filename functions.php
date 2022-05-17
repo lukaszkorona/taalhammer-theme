@@ -964,3 +964,26 @@ if ( function_exists( 'acf_add_options_page' ) ) {
 function theme_name_scripts2() {
     wp_enqueue_script('common_JS', get_stylesheet_directory_uri() . '/assets/js/common2.js', ['jquery'], time());
 }*/
+
+
+function get_url_for_button($item)
+{
+	global $current_user;
+	$get_started = get_field('upgrade');
+	$get_started_not_login = get_field('start_my_free_trial');
+	$get_started_level = get_field('your_level');
+	if (is_user_logged_in()) {
+
+		if ($current_user->membership_level->ID != $item) {
+			return pmpro_getCheckoutButton($item, $get_started);
+		} else {
+			return "<a class='pmpro_btn ths' disabled>$get_started_level</a>";//href='$url'
+		}
+	} else {
+		$url = wp_login_url();
+		return "<a href='$url' class='pmpro_btn ths'>$get_started_not_login</a>";
+	}
+}
+if (!is_user_logged_in()) {
+	$class_login = 'not_login_class';
+}
