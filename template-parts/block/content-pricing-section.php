@@ -32,7 +32,7 @@ $title = get_field('tytul');
 $obrazek = get_field('obrazek');
 $edytor_pricing = get_field('edytor_pricing');
 ?>
-<section class=" pricing-section">
+<section class="pricing-section">
    <div class="pricing-section-inner">
        <div class="container">
            <h1 class="pricing-title"><?=$title;?></h1>
