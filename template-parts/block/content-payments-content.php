@@ -9,6 +9,25 @@ $see_details = get_field('see_details');
 $monthly_label = get_field('monthly_label');
 $lifetime_label = get_field('lifetime_label');
 
+
+if(!empty(get_current_user_id() )):
+	global $wpdb;
+	$prefix = $wpdb->prefix;
+	$user_id= get_current_user_id();
+	$tab = $prefix."pmpro_memberships_users";
+	$status = $wpdb->get_var("SELECT status FROM $tab WHERE user_id = $user_id ORDER BY ID DESC LIMIT 1");
+		if(!empty($status)):
+			if($status !== 'active'):
+			?>
+				<div class="__trial-expired">
+					<p>
+					<?= __('Your trial period has expired. Please choose one of the plans to continue learning.','taalhammer-payments');  ?>
+					</p>
+				</div>
+				<?php
+			endif;
+		endif;
+	endif;
 ?>
 <div class="payments-content">
   <div class="container">
