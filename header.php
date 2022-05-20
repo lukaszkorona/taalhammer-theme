@@ -18,9 +18,13 @@
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
         integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <?php wp_head(); ?>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700;900&display=swap" rel="stylesheet">
 </head>
 
-<body <?php body_class(); ?>>
+<body <?php body_class(get_field('body_class')); ?>>
     <?php wp_body_open(); ?>
     <div id="page" class="siteMal">
         <header id="masthead" class="<?='siteMal-header'?> siteMal-width">

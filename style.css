@@ -4627,3 +4627,137 @@ h2.has-text-align-center {
   margin-right: 0;
   width: max-content;
 }
+
+
+
+
+
+
+
+
+
+
+
+/*Learning Online Hub*/
+.learning-online-hub .entry-header {
+	display: none;
+}
+
+.learning-online-hub .page.type-page .entry-content {
+	margin-top: 61px;
+	margin-left: 20px;
+	margin-right: 20px;
+}
+
+@media (min-width: 1220px) {
+	.learning-online-hub .page.type-page .entry-content {
+		margin-left: auto;
+		margin-right: auto;
+		max-width: 1180px;	
+	}
+}
+
+.learning-online-hub h1 {
+	font-family: 'Roboto', sans-serif;
+	font-size: 48px;
+	line-height: 68px;
+	color: #212121;
+	font-weight: 900;
+	letter-spacing: 2px;
+	margin-bottom: 40px;
+}
+
+.learning-online-hub h1 ~ p {
+	line-height: 26px;
+	font-size: 16px;
+	color: #212121;
+}
+
+.learning-online-hub .pt-cv-content-item {
+	position: relative;
+	padding-bottom: 95px;
+}
+
+.learning-online-hub .pt-cv-content-item img {
+	aspect-ratio: 14 / 8;
+	margin-bottom: 20px;
+	object-fit: cover;
+}
+
+.learning-online-hub .pt-cv-title,
+.learning-online-hub .pt-cv-title a {
+	font-size: 20px;
+	line-height: 24px;
+	color: #212121;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 600;
+}
+
+.learning-online-hub .pt-cv-content {
+	font-size: 16px;
+	line-height: 26px;
+	color: #212121;
+	margin-bottom: 0;
+}
+
+.learning-online-hub .pt-cv-content .btn.btn-success {
+	position: absolute;
+	bottom: 15px;
+	left: 15px;
+	width: 200px;
+	height: 60px;
+	background-color: #fff;
+	border: 2px solid #000;
+	border-radius: 0;
+	text-transform: uppercase;
+	color: #212121;
+	font-size: 13px;
+	line-height: 20px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 500;
+}
+
+.learning-online-hub .pt-cv-page {
+	display: flex;
+	flex-flow: wrap;
+}
+
+.learning-online-hub .pt-cv-meta-fields {
+	margin-top: 10px;
+}
+
+.learning-online-hub .pt-cv-meta-fields time {
+	font-size: 16px;
+	line-height: 22px;
+	color: #a5a5a5;
+	font-family: 'Roboto', sans-serif;
+}
+
+.learning-online-hub .pt-cv-meta-fields .terms,
+.learning-online-hub .pt-cv-meta-fields .terms a {
+	font-size: 16px;
+	line-height: 22px;
+	color: #212121;
+	font-family: 'Roboto', sans-serif;
+}
+
+.learning-online-hub .entry-content > h2 {
+	margin-bottom: 10px;
+	margin-top: 62px;
+	font-size: 28px;
+	line-height: 32px;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 600;
+	letter-spacing: 1px;
+	color: #212121;
+}
+
+.learning-online-hub .entry-content > h2 + p {
+	margin-bottom: 40px;
+	font-size: 16px;
+	line-height: 26px;
+	color: #212121;
+}
