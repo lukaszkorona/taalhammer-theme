@@ -79,6 +79,8 @@ if ( ! function_exists( 'twentysixteen_setup' ) ) :
 			)
 		);
 
+		add_image_size('640x430', 640, 430, true);
+
 		/*
 		 * Enable support for Post Thumbnails on posts and pages.
 		 *
@@ -987,3 +989,8 @@ function get_url_for_button($item)
 if (!is_user_logged_in()) {
 	$class_login = 'not_login_class';
 }
+
+function mytheme_custom_excerpt_length( $length ) {
+	return 30;
+}
+add_filter( 'excerpt_length', 'mytheme_custom_excerpt_length', 999 );

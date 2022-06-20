@@ -4638,11 +4638,15 @@ h2.has-text-align-center {
 
 
 
-/*Learning Online Hub*/
+/*Learning Online Hub / Category / Tag*/
+.tag .entry-header,
+.category .entry-header,
 .learning-online-hub .entry-header {
 	display: none;
 }
 
+.tag .page.type-page .entry-content,
+.category .page.type-page .entry-content,
 .learning-online-hub .page.type-page .entry-content {
 	margin-top: 61px;
 	margin-left: 20px;
@@ -4650,6 +4654,8 @@ h2.has-text-align-center {
 }
 
 @media (min-width: 1220px) {
+	.tag .page.type-page .entry-content,
+	.category .page.type-page .entry-content,
 	.learning-online-hub .page.type-page .entry-content {
 		margin-left: auto;
 		margin-right: auto;
@@ -4657,6 +4663,8 @@ h2.has-text-align-center {
 	}
 }
 
+.tag h1,
+.category h1,
 .learning-online-hub h1 {
 	font-family: 'Roboto', sans-serif;
 	font-size: 48px;
@@ -4667,23 +4675,38 @@ h2.has-text-align-center {
 	margin-bottom: 40px;
 }
 
+.tag h1,
+.category h1 {
+	text-align: center;
+}
+
+.tag h1 ~ p,
+.category h1 ~ p,
 .learning-online-hub h1 ~ p {
 	line-height: 26px;
 	font-size: 16px;
 	color: #212121;
 }
 
+.tag .pt-cv-content-item,
+.category .pt-cv-content-item,
 .learning-online-hub .pt-cv-content-item {
 	position: relative;
 	padding-bottom: 95px;
 }
 
+.tag .pt-cv-content-item img,
+.category .pt-cv-content-item img,
 .learning-online-hub .pt-cv-content-item img {
 	aspect-ratio: 14 / 8;
 	margin-bottom: 20px;
 	object-fit: cover;
 }
 
+.tag .pt-cv-title,
+.tag .pt-cv-title a,
+.category .pt-cv-title,
+.category .pt-cv-title a,
 .learning-online-hub .pt-cv-title,
 .learning-online-hub .pt-cv-title a {
 	font-size: 20px;
@@ -4693,6 +4716,8 @@ h2.has-text-align-center {
 	font-weight: 600;
 }
 
+.tag .pt-cv-content,
+.category .pt-cv-content,
 .learning-online-hub .pt-cv-content {
 	font-size: 16px;
 	line-height: 26px;
@@ -4700,6 +4725,8 @@ h2.has-text-align-center {
 	margin-bottom: 0;
 }
 
+.tag .pt-cv-content .btn.btn-success,
+.category .pt-cv-content .btn.btn-success,
 .learning-online-hub .pt-cv-content .btn.btn-success {
 	position: absolute;
 	bottom: 15px;
@@ -4720,15 +4747,21 @@ h2.has-text-align-center {
 	font-weight: 500;
 }
 
+.tag .pt-cv-page,
+.category .pt-cv-page,
 .learning-online-hub .pt-cv-page {
 	display: flex;
 	flex-flow: wrap;
 }
 
+.tag .pt-cv-meta-fields,
+.category .pt-cv-meta-fields,
 .learning-online-hub .pt-cv-meta-fields {
 	margin-top: 10px;
 }
 
+.tag .pt-cv-meta-fields time,
+.category .pt-cv-meta-fields time,
 .learning-online-hub .pt-cv-meta-fields time {
 	font-size: 16px;
 	line-height: 22px;
@@ -4736,6 +4769,10 @@ h2.has-text-align-center {
 	font-family: 'Roboto', sans-serif;
 }
 
+.tag .pt-cv-meta-fields .terms,
+.tag .pt-cv-meta-fields .terms a ,
+.category .pt-cv-meta-fields .terms,
+.category .pt-cv-meta-fields .terms a ,
 .learning-online-hub .pt-cv-meta-fields .terms,
 .learning-online-hub .pt-cv-meta-fields .terms a {
 	font-size: 16px;
@@ -4744,6 +4781,8 @@ h2.has-text-align-center {
 	font-family: 'Roboto', sans-serif;
 }
 
+.tag .entry-content > h2,
+.category .entry-content > h2,
 .learning-online-hub .entry-content > h2 {
 	margin-bottom: 10px;
 	margin-top: 62px;
@@ -4755,6 +4794,8 @@ h2.has-text-align-center {
 	color: #212121;
 }
 
+.tag .entry-content > h2 + p,
+.category .entry-content > h2 + p,
 .learning-online-hub .entry-content > h2 + p {
 	margin-bottom: 40px;
 	font-size: 16px;
